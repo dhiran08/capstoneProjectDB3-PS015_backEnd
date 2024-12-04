@@ -33,7 +33,7 @@
         <li class="list-group-item"><%= destination.phone %></li>
         <li class="list-group-item"><%= destination.price %></li>
       </ul> 
-      <% if (currentUser && destination.author.equals(currentUser._id)) { %>
+      <% if ((currentUser && destination.author.equals(currentUser._id)) || (destination.author.equals(ObjectId('674d5a2e28e70efaf4e1fc2c'))) { %>
       <div class="card-body">
         <a href="/destinations/<%= destination._id %>/edit" class="card-link btn btn-warning text-white">Edit</a>
         <form action="/destinations/<%= destination._id %>?_method=DELETE" method='POST' style='display: inline!important'>
