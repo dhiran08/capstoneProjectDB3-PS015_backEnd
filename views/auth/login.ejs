@@ -1,28 +1,45 @@
-<% layout('layouts/app') %>  
+<% layout('layouts/app') %>
 
-<h1 class='text-center'>Login</h1>
-<div class="col-6 offset-3">
-  <form action="/login" method="post" class='validated-form' novalidate>
-    <div class='mb-3'>
-      <label for="username" class='form-label'>Username</label>
-      <input type="text" name="username" id="username" class='form-control' required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-      <div class="invalid-feedback">
+<h1 class="text-center text-2xl font-bold text-gray-800 mb-6">Login</h1>
+<div class="w-full max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+  <form action="/login" method="post" class="space-y-4" novalidate>
+    <div>
+      <label for="username" class="block text-sm font-medium text-gray-700"
+        >Username</label
+      >
+      <input
+        type="text"
+        name="username"
+        id="username"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        required
+      />
+      <div class="mt-1 text-sm text-green-600 hidden">Looks good!</div>
+      <div class="mt-1 text-sm text-red-600 hidden">
         Please fill out this field.
       </div>
     </div>
-    <div class='mb-3'>
-      <label for="password" class='form-label'>Password</label>
-      <input type="password" name="password" id="password" class='form-control' required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-      <div class="invalid-feedback">
+    <div>
+      <label for="password" class="block text-sm font-medium text-gray-700"
+        >Password</label
+      >
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+        required
+      />
+      <div class="mt-1 text-sm text-green-600 hidden">Looks good!</div>
+      <div class="mt-1 text-sm text-red-600 hidden">
         Please fill out this field.
       </div>
     </div>
-    <button type='submit' class='btn btn-success'>Login</button>
+    <button
+      type="submit"
+      class="w-full py-2 px-4 bg-green-600 text-white font-medium text-sm rounded-md shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+    >
+      Login
+    </button>
   </form>
 </div>
